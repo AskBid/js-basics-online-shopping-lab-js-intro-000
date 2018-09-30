@@ -13,8 +13,8 @@ function addToCart(item) {
     function getPrice() {
         return Math.floor(Math.random() * 100)
     }
-
-    cart.push({item, getPrice()})
+    cart.push({itemName:item, itemPrice: getPrice()})
+    return `${item} has been added to your cart.`
 }
 
 function viewCart() {

@@ -32,7 +32,7 @@ function viewCart() {
         var price = cart[i].itemPrice;
         list += ` ${name} at $${price},`
     }
-    list += ` and ${cart[cart.length].itemName} at $${cart[cart.length].itemPrice}`
+    list += ` and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}`
 
     return `In your cart, you have${list}`
 }

@@ -36,8 +36,8 @@ function viewCart() {
         }
         var name = cart[i].itemName;
         var price = cart[i].itemPrice;
-        list += `${name} at $${price}`
-        if (i === cart.length) {
+        list += ` ${name} at $${price}`
+        if (i === cart.length - 1) {
             list += '.'
         } else {
             list += ','

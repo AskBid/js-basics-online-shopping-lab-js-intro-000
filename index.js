@@ -27,15 +27,12 @@ function viewCart() {
     }
     var list = ""
 
-    for (var i = 0; i < cart.length; i++) {
+    for (var i = 0; i < cart.length - 1; i++) {
         var name = cart[i].itemName;
         var price = cart[i].itemPrice;
-        list += ` ${name} at $${price}`
-        if (i < cart.length-1) {
-            list += ','
-        }
+        list += ` ${name} at $${price},`
     }
-    list += '.'
+    list += ` and ${cart[cart.length].itemName} at $${cart[cart.length].itemPrice}`
 
     return `In your cart, you have${list}`
 }

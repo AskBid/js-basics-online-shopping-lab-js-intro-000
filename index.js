@@ -30,9 +30,9 @@ function viewCart() {
     for (var i = 0; i < cart.length; i++) {
         var name = cart[i].itemName;
         var price = cart[i].itemPrice;
-        list =+ `${name} batter at ${price}`
+        list += `${name} batter at ${price}`
         if (i < cart.length-2) {
-            list =+ ','
+            list += ','
         }
     }
     list =+ '.'

@@ -22,17 +22,28 @@ function addToCart(item) {
 }
 
 function viewCart() {
+
+
     if (cart.length === 0) {
         return "Your shopping cart is empty."
     }
+
     var list = ""
 
-    for (var i = 0; i < cart.length - 1; i++) {
+    for (var i = 0; i < cart.length; i++) {
+        if (i === cart.length) {
+            list += ' and'
+        }
         var name = cart[i].itemName;
         var price = cart[i].itemPrice;
-        list += ` ${name} at $${price},`
+        list += `${name} at $${price}`
+        if (i === cart.length) {
+            list += '.'
+        } else {
+            list += ','
+        }
     }
-    list += ` and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}`
+
 
     return `In your cart, you have${list}`
 }

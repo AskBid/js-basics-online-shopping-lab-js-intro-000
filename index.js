@@ -31,17 +31,21 @@ function viewCart() {
     var list = ""
 
     for (var i = 0; i < cart.length; i++) {
+
         if (i === cart.length - 1 && i != 0) {
             list += ' and'
         }
+
         var name = cart[i].itemName;
         var price = cart[i].itemPrice;
         list += ` ${name} at $${price}`
+
         if (i === cart.length - 1) {
             list += '.'
         } else {
             list += ','
         }
+
     }
 
 
@@ -49,7 +53,11 @@ function viewCart() {
 }
 
 function total() {
-
+    var sum = 0
+    for (var i = 0; i < cart.length; i++) {
+        sum += cart[i].itemPrice
+    }
+    return sum
 }
 
 function removeFromCart(item) {

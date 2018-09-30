@@ -36,7 +36,7 @@ function viewCart() {
         }
     }
     list =+ '.'
-    
+
     return `In your cart, you have${list}`
 }
 

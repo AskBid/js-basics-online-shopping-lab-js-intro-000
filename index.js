@@ -31,7 +31,7 @@ function viewCart() {
     var list = ""
 
     for (var i = 0; i < cart.length; i++) {
-        if (i === cart.length) {
+        if (i === cart.length - 1) {
             list += ' and'
         }
         var name = cart[i].itemName;

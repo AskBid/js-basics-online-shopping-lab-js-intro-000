@@ -22,11 +22,21 @@ function addToCart(item) {
 }
 
 function viewCart() {
+    if (cart.length === 0) {
+        return "Your shopping cart is empty."
+    }
     var list = ""
 
-    for (var i = 0; i < cart.length; i++){
-        
+    for (var i = 0; i < cart.length; i++) {
+        var name = cart[i][itemName];
+        var price = cart[i][itemPrice];
+        list =+ `${name} batter at ${price}`
+        if (i < cart.length-2) {
+            list =+ ','
+        }
     }
+    list =+ '.'
+    
     return `In your cart, you have${list}`
 }
 

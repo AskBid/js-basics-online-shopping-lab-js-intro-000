@@ -22,11 +22,16 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // write your code here
+    var list = ""
+
+    for (var i = 0; i < cart.length; i++){
+        
+    }
+    return `In your cart, you have${list}`
 }
 
 function total() {
-  // write your code here
+
 }
 
 function removeFromCart(item) {

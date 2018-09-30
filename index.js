@@ -15,7 +15,7 @@ function addToCart(item) {
         return Math.floor(Math.random() * 100)
     }
 
-    cart.push({itemName:item, itemPrice: getPrice()})
+    cart.push({itemName: item, itemPrice: getPrice()})
 
     return `${item} has been added to your cart.`
 
@@ -28,8 +28,8 @@ function viewCart() {
     var list = ""
 
     for (var i = 0; i < cart.length; i++) {
-        var name = cart[i][itemName];
-        var price = cart[i][itemPrice];
+        var name = cart[i].itemName;
+        var price = cart[i].itemPrice;
         list =+ `${name} batter at ${price}`
         if (i < cart.length-2) {
             list =+ ','
